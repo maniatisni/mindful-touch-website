@@ -1,0 +1,34 @@
+{
+  "name": "mindful-touch-website",
+  "version": "1.0.0",
+  "description": "Official website for Mindful Touch - A gentle awareness tool for mindful hand movement tracking",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'Static site - no build process needed'",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maniatisni/mindful-touch-website.git"
+  },
+  "keywords": [
+    "mindfulness",
+    "awareness",
+    "hand-tracking",
+    "privacy-first",
+    "desktop-app",
+    "tauri",
+    "open-source"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maniatisni/mindful-touch-website/issues"
+  },
+  "homepage": "https://maniatisni.github.io/mindful-touch-website",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}

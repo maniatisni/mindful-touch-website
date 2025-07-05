@@ -1,0 +1,43 @@
+# Site configuration for GitHub Pages
+title: "Mindful Touch"
+description: "A gentle awareness tool for mindful hand movement tracking"
+baseurl: ""
+url: "https://maniatisni.github.io/mindful-touch-website"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .github
+
+# Include files
+include:
+  - .htaccess
+
+# SEO and social
+author: "Nikos Maniatis"
+github_username: maniatisni
+
+# Site settings
+lang: en
+timezone: UTC
+
+# Social links
+social:
+  - name: GitHub
+    url: https://github.com/maniatisni/mindful-touch
+    icon: github
