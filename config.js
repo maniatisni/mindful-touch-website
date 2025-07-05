@@ -4,7 +4,7 @@ const config = {
   
   // App information
   appName: "Mindful Touch",
-  appDescription: "A gentle awareness tool for mindful hand movement tracking. Download the latest release and start your journey to mindful living.",
+  appDescription: "A gentle awareness tool for mindful hand movement tracking that helps you become more aware of unconscious face-touching habits.",
   
   // Links and URLs
   githubUrl: "https://github.com/maniatisni/mindful-touch",
@@ -31,35 +31,37 @@ const config = {
   features: [
     {
       icon: "HandWaving",
-      title: "Gentle Awareness",
-      description: "Receive gentle reminders to bring awareness to your hand movements throughout the day."
+      title: "Multi-Region Detection",
+      description: "Monitors specific facial regions including scalp, eyebrows, eyes, mouth, and beard area."
     },
     {
       icon: "ClockCounterClockwise", 
-      title: "Real-Time Tracking",
-      description: "Track your mindful hand movements in real-time, gaining insights into your practice."
+      title: "Real-Time Notifications",
+      description: "Provides gentle, non-intrusive notifications when your hands approach your face."
     },
     {
       icon: "ShieldCheck",
-      title: "Privacy Focused", 
-      description: "Your data stays private. Mindful Touch does not collect or share any personal information."
+      title: "Privacy-First", 
+      description: "All processing happens locally on your device. No data collection or sharing."
     }
   ],
   
   // Navigation
   navigation: [
-    { text: "Features", href: "#features" },
-    { text: "Privacy", href: "#privacy" }
+    { text: "Home", href: "/" },
+    { text: "Downloads", href: "/downloads" },
+    { text: "About", href: "/about" },
+    { text: "Help", href: "/help" }
   ],
   
   // Content sections
   heroTitle: "Mindful Touch",
-  heroSubtitle: "A gentle awareness tool for mindful hand movement tracking. Download the latest release and start your journey to mindful living.",
+  heroSubtitle: "A gentle awareness tool for mindful hand movement tracking that helps you become more aware of unconscious face-touching habits through real-time detection and notifications.",
   
-  featuresTitle: "Explore the Benefits of Mindful Touch",
-  featuresDescription: "Discover how Mindful Touch can enhance your daily mindfulness practice with its intuitive features.",
+  featuresTitle: "Break Unconscious Face-Touching Habits",
+  featuresDescription: "Mindful Touch uses advanced multi-region detection to help you become aware of when your hands approach your face, supporting better hygiene and mindful habits.",
   
-  privacyContent: "At Mindful Touch, we prioritize your privacy. Our application is designed to operate without collecting or storing any personal data. Your mindful hand movement tracking remains entirely private and secure on your device. We believe in transparency and respect for your personal space, ensuring that your journey towards mindfulness is both safe and confidential."
+  privacyContent: "At Mindful Touch, we prioritize your privacy. Our application operates entirely on your device with no data collection, storage, or transmission. Your face-touching awareness journey remains completely private and secure. All processing happens locally, ensuring your personal data never leaves your computer."
 };
 
 // Make config available globally

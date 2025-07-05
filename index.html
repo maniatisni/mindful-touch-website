@@ -1,318 +1,168 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+  />
 
-    <title id="page-title">Mindful Touch</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title id="page-title">Mindful Touch</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="config.js"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col" id="main-container" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid px-10 py-3" id="header">
-          <div class="flex items-center gap-4" id="logo-section">
-            <div class="size-4">
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_6_319)">
-                  <path
-                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"></rect></clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]" id="app-name">Mindful Touch</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9" id="navigation">
-              <!-- Navigation will be populated by JavaScript -->
-            </div>
-            <div class="flex gap-2">
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]"
-                id="download-btn"
-              >
-                <span class="truncate">Download</span>
-              </button>
-              <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]"
-                id="github-btn"
-              >
-                <span class="truncate">GitHub</span>
-              </button>
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
-                id="facebook-btn"
-              >
-                <div data-icon="FacebookLogo" data-size="20px" data-weight="regular">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  id="hero-section"
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                      id="hero-title"
-                    >
-                      Mindful Touch
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal" id="hero-subtitle">
-                      A gentle awareness tool for mindful hand movement tracking. Download the latest release and start your journey to mindful living.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                    id="hero-download-btn"
-                  >
-                    <span class="truncate">Download Latest Release</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" id="features-heading">Features</h2>
-            <div class="flex flex-col gap-10 px-4 py-10 @container">
-              <div class="flex flex-col gap-6">
-                <div class="flex flex-col gap-4">
-                  <h1
-                    class="tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                    id="features-title"
-                  >
-                    Explore the Benefits of Mindful Touch
-                  </h1>
-                  <p class="text-base font-normal leading-normal max-w-[720px]" id="features-description">
-                    Discover how Mindful Touch can enhance your daily mindfulness practice with its intuitive features.
-                  </p>
-                </div>
-                <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] w-fit"
-                  id="learn-more-btn"
-                >
-                  <span class="truncate">Learn More</span>
-                </button>
-              </div>
-              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0" id="features-grid">
-                <!-- Features will be populated by JavaScript -->
-              </div>
-            </div>
-            <h2 class="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5" id="privacy-heading">Privacy</h2>
-            <p class="text-base font-normal leading-normal pb-3 pt-1 px-4" id="privacy-content">
-              At Mindful Touch, we prioritize your privacy. Our application is designed to operate without collecting or storing any personal data. Your mindful hand movement
-              tracking remains entirely private and secure on your device. We believe in transparency and respect for your personal space, ensuring that your journey towards
-              mindfulness is both safe and confidential.
-            </p>
-          </div>
-        </div>
-        <footer class="flex justify-center">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="#" id="footer-github-link">
-                  <div data-icon="GithubLogo" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <p class="text-base font-normal leading-normal" id="copyright">© 2024 Mindful Touch. All rights reserved.</p>
-            </footer>
-          </div>
-        </footer>
-      </div>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/pages.js"></script>
+</head>
+<body>
+  <div class="relative flex size-full min-h-screen flex-col" id="main-container" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <div id="header-container"></div>
+      <div id="page-content"></div>
+      <div id="footer-container"></div>
     </div>
-    <script>
-      // Apply configuration on page load
-      document.addEventListener('DOMContentLoaded', function() {
-        if (typeof config !== 'undefined') {
-          applyConfig();
+  </div>
+  
+  <script>
+    // Apply configuration on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof config !== 'undefined') {
+        initializeApp();
+      }
+    });
+
+    function initializeApp() {
+      // Update page title
+      document.getElementById('page-title').textContent = config.appName;
+      
+      // Render layout components
+      document.getElementById('header-container').innerHTML = Components.header();
+      document.getElementById('footer-container').innerHTML = Components.footer();
+      
+      // Apply colors to the main container
+      applyColors();
+      
+      // Setup navigation
+      setupNavigation();
+    }
+
+    function setupNavigation() {
+      // Add click handlers for navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          
+          // Handle anchor links vs page routes
+          if (href.startsWith('#')) {
+            // Scroll to section on home page
+            if (window.location.pathname !== '/') {
+              router.navigate('/');
+              setTimeout(() => {
+                document.querySelector(href)?.scrollIntoView({behavior: 'smooth'});
+              }, 100);
+            } else {
+              document.querySelector(href)?.scrollIntoView({behavior: 'smooth'});
+            }
+          } else {
+            router.navigate(href);
+          }
+        });
+      });
+    }
+
+    function applyColors() {
+      const mainContainer = document.getElementById('main-container');
+      const header = document.querySelector('#header-container header');
+      
+      // Set main background
+      mainContainer.style.backgroundColor = config.backgroundColor;
+      
+      // Set header border and colors
+      if (header) {
+        header.style.borderColor = config.borderColor;
+        header.style.color = config.textColor;
+      }
+      
+      // Apply colors to navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.style.color = config.textColor;
+      });
+      
+      // Apply colors to buttons
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => {
+        if (button.id === 'download-btn' || button.id === 'hero-download-btn' || button.classList.contains('download-btn')) {
+          button.style.backgroundColor = config.primaryColor;
+          button.style.color = config.textColor;
+        } else if (button.id === 'github-btn' || button.id === 'facebook-btn' || button.classList.contains('source-btn') || button.classList.contains('github-help-btn')) {
+          button.style.backgroundColor = config.secondaryColor;
+          button.style.color = config.textColor;
         }
       });
+      
+      // Apply colors to cards and other elements
+      const cards = document.querySelectorAll('.feature-card, .download-card');
+      cards.forEach(card => {
+        card.style.borderColor = config.borderColor;
+        card.style.backgroundColor = config.backgroundColor;
+      });
+      
+      // Apply text colors
+      const titles = document.querySelectorAll('.feature-title, h1, h2, h3, h4');
+      titles.forEach(title => {
+        title.style.color = config.textColor;
+      });
+      
+      const descriptions = document.querySelectorAll('.feature-description, p');
+      descriptions.forEach(desc => {
+        desc.style.color = config.textColor;
+      });
+      
+      const mutedText = document.querySelectorAll('#copyright, .text-gray-600');
+      mutedText.forEach(text => {
+        text.style.color = config.mutedTextColor;
+      });
+    }
 
-      function applyConfig() {
-        // Update page title
-        document.getElementById('page-title').textContent = config.appName;
-        
-        // Update app name
-        document.getElementById('app-name').textContent = config.appName;
-        
-        // Update hero section
-        document.getElementById('hero-title').textContent = config.heroTitle;
-        document.getElementById('hero-subtitle').textContent = config.heroSubtitle;
-        
-        // Update features section
-        document.getElementById('features-title').textContent = config.featuresTitle;
-        document.getElementById('features-description').textContent = config.featuresDescription;
-        
-        
-        // Update privacy section
-        document.getElementById('privacy-content').textContent = config.privacyContent;
-        
-        // Update copyright
-        document.getElementById('copyright').textContent = `© ${config.copyrightYear} ${config.copyrightText}`;
-        
-        // Apply colors
-        applyColors();
-        
-        // Apply background images
-        applyBackgroundImages();
-        
-        // Generate navigation
-        generateNavigation();
-        
-        // Generate features
-        generateFeatures();
-        
-        // Update links
-        updateLinks();
-      }
-
-      function applyColors() {
-        const root = document.documentElement;
-        const mainContainer = document.getElementById('main-container');
-        const header = document.getElementById('header');
-        const logoSection = document.getElementById('logo-section');
-        
-        // Set main background
-        mainContainer.style.backgroundColor = config.backgroundColor;
-        
-        // Set header border
-        header.style.borderColor = config.borderColor;
-        
-        // Set text colors
-        logoSection.style.color = config.textColor;
-        document.getElementById('app-name').style.color = config.textColor;
-        document.getElementById('features-heading').style.color = config.textColor;
-        document.getElementById('features-title').style.color = config.textColor;
-        document.getElementById('features-description').style.color = config.textColor;
-        document.getElementById('privacy-heading').style.color = config.textColor;
-        document.getElementById('privacy-content').style.color = config.textColor;
-        document.getElementById('copyright').style.color = config.mutedTextColor;
-        
-        // Set button colors
-        const downloadBtn = document.getElementById('download-btn');
-        const githubBtn = document.getElementById('github-btn');
-        const facebookBtn = document.getElementById('facebook-btn');
-        const heroDownloadBtn = document.getElementById('hero-download-btn');
-        const learnMoreBtn = document.getElementById('learn-more-btn');
-        
-        downloadBtn.style.backgroundColor = config.primaryColor;
-        downloadBtn.style.color = config.textColor;
-        
-        githubBtn.style.backgroundColor = config.secondaryColor;
-        githubBtn.style.color = config.textColor;
-        
-        facebookBtn.style.backgroundColor = config.secondaryColor;
-        facebookBtn.style.color = config.textColor;
-        
-        heroDownloadBtn.style.backgroundColor = config.primaryColor;
-        heroDownloadBtn.style.color = config.textColor;
-        
-        learnMoreBtn.style.backgroundColor = config.primaryColor;
-        learnMoreBtn.style.color = config.textColor;
-      }
-
-      function applyBackgroundImages() {
-        const heroSection = document.getElementById('hero-section');
-        
+    function applyBackgroundImages() {
+      const heroSection = document.getElementById('hero-section');
+      if (heroSection) {
         heroSection.style.backgroundImage = `${config.heroOverlayGradient}, url("${config.heroBackgroundImage}")`;
       }
+    }
 
-      function generateNavigation() {
-        const navigation = document.getElementById('navigation');
-        navigation.innerHTML = '';
-        
-        config.navigation.forEach(item => {
-          const link = document.createElement('a');
-          link.className = 'text-sm font-medium leading-normal';
-          link.style.color = config.textColor;
-          link.href = item.href;
-          link.textContent = item.text;
-          navigation.appendChild(link);
-        });
+    function updateLinks() {
+      // Update download buttons
+      const downloadBtns = document.querySelectorAll('#download-btn, #hero-download-btn, .download-btn');
+      downloadBtns.forEach(btn => {
+        btn.onclick = () => window.open(config.downloadUrl, '_blank');
+      });
+      
+      // Update GitHub buttons
+      const githubBtns = document.querySelectorAll('#github-btn, .source-btn');
+      githubBtns.forEach(btn => {
+        btn.onclick = () => window.open(config.githubUrl, '_blank');
+      });
+      
+      // Update Facebook button
+      const facebookBtn = document.getElementById('facebook-btn');
+      if (facebookBtn) {
+        facebookBtn.onclick = () => window.open(config.facebookUrl, '_blank');
       }
+    }
 
-      function generateFeatures() {
-        const featuresGrid = document.getElementById('features-grid');
-        featuresGrid.innerHTML = '';
-        
-        config.features.forEach(feature => {
-          const featureDiv = document.createElement('div');
-          featureDiv.className = 'flex flex-1 gap-3 rounded-lg border p-4 flex-col';
-          featureDiv.style.borderColor = config.borderColor;
-          featureDiv.style.backgroundColor = config.backgroundColor;
-          
-          // Create icon based on the icon name
-          let iconSvg = '';
-          switch(feature.icon) {
-            case 'HandWaving':
-              iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256"><path d="M220.2,100l-18-31.18a28,28,0,0,0-47.3-1.92L139.56,40.31a28,28,0,0,0-48.12-.63,28,28,0,0,0-43,34.78l3.34,5.79a28,28,0,0,0-22,41.92l38,65.82a87.46,87.46,0,0,0,53.43,41,88.56,88.56,0,0,0,22.92,3A88,88,0,0,0,220.2,100Zm-6.67,62.63A72,72,0,0,1,81.63,180l-38-65.82a12,12,0,0,1,20.79-12l22,38.1a8,8,0,1,0,13.85-8l-38-65.81a12,12,0,0,1,13.5-17.59,11.9,11.9,0,0,1,7.29,5.59l34,58.89a8,8,0,0,0,13.85-8l-26-45h0a12,12,0,0,1,20.78-12L160,107.78a48.08,48.08,0,0,0-11,61,8,8,0,0,0,13.86-8,32,32,0,0,1,11.71-43.71,8,8,0,0,0,2.93-10.93l-10-17.32a12,12,0,0,1,20.78-12l18,31.18A71.49,71.49,0,0,1,213.53,162.62ZM184.27,29.93a8,8,0,0,1,9.8-5.66c15.91,4.27,29,14.11,36.86,27.73a8,8,0,0,1-13.86,8c-5.72-9.92-15.36-17.12-27.14-20.27A8,8,0,0,1,184.27,29.93ZM80.91,237a8,8,0,0,1-11.24,1.33c-11-8.69-20.11-19.58-28.6-34.28a8,8,0,0,1,13.86-8c7.44,12.88,15.27,22.32,24.65,29.72A8,8,0,0,1,80.91,237Z"></path></svg>';
-              break;
-            case 'ClockCounterClockwise':
-              iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256"><path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49c7.15-8.42,14.27-16.35,22.39-24.57a80,80,0,1,1,1.66,114.75,8,8,0,1,0-11,11.64A96,96,0,1,0,128,32Z"></path></svg>';
-              break;
-            case 'ShieldCheck':
-              iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v58.78c0,89.61,75.82,119.34,91,124.39a15.53,15.53,0,0,0,10,0c15.2-5.05,91-34.78,91-124.39V56A16,16,0,0,0,208,40Zm0,74.79c0,78.42-66.35,104.62-80,109.18-13.53-4.51-80-30.69-80-109.18V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"></path></svg>';
-              break;
-            default:
-              iconSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Z"></path></svg>';
-          }
-          
-          featureDiv.innerHTML = `
-            <div style="color: ${config.textColor}">
-              ${iconSvg}
-            </div>
-            <div class="flex flex-col gap-1">
-              <h2 class="text-base font-bold leading-tight" style="color: ${config.textColor}">${feature.title}</h2>
-              <p class="text-sm font-normal leading-normal" style="color: ${config.mutedTextColor}">${feature.description}</p>
-            </div>
-          `;
-          
-          featuresGrid.appendChild(featureDiv);
-        });
-      }
-
-      function updateLinks() {
-        // Update download buttons
-        document.getElementById('download-btn').onclick = () => window.open(config.downloadUrl, '_blank');
-        document.getElementById('hero-download-btn').onclick = () => window.open(config.downloadUrl, '_blank');
-        
-        // Update GitHub button
-        document.getElementById('github-btn').onclick = () => window.open(config.githubUrl, '_blank');
-        
-        // Update Facebook button
-        document.getElementById('facebook-btn').onclick = () => window.open(config.facebookUrl, '_blank');
-        
-        // Update footer GitHub link
-        document.getElementById('footer-github-link').href = config.githubUrl;
-      }
-    </script>
-  </body>
+    // Global functions for pages to use
+    window.applyColors = applyColors;
+    window.applyBackgroundImages = applyBackgroundImages;
+    window.updateLinks = updateLinks;
+  </script>
+</body>
 </html>
